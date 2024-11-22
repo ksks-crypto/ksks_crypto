@@ -1,0 +1,9 @@
+import machine
+import time
+
+analog_pin = machine.ADC(28) #Change the pin number accordingly
+
+while True:
+    sensor_value = analog_pin.read_u16()
+    print("Sensor Value:", sensor_value)
+    time.sleep(1)
